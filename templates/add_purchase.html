@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <div class="card">
+            <div class="card-header">
+                <h4>Add New Purchase</h4>
+            </div>
+            <div class="card-body">
+                <form method="POST" action="/add">
+                    <div class="mb-3">
+                        <label for="metal_type" class="form-label">Metal Type</label>
+                        <select class="form-select" id="metal_type" name="metal_type" required>
+                            <option value="silver">Silver</option>
+                            <option value="gold">Gold</option>
+                            <option value="platinum">Platinum</option>
+                            <option value="palladium">Palladium</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="weight_oz" class="form-label">Weight (Troy Ounces)</label>
+                        <input type="number" step="0.01" class="form-control" id="weight_oz" 
+                               name="weight_oz" required placeholder="e.g., 1.00">
+                        <small class="form-text text-muted">1 troy oz = 31.1 grams</small>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="price_paid" class="form-label">Price Paid ($)</label>
+                        <input type="number" step="0.01" class="form-control" id="price_paid" 
+                               name="price_paid" required placeholder="e.g., 25.50">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="purchase_date" class="form-label">Purchase Date</label>
+                        <input type="date" class="form-control" id="purchase_date" 
+                               name="purchase_date" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="notes" class="form-label">Notes (Optional)</label>
+                        <textarea class="form-control" id="notes" name="notes" rows="3" 
+                                  placeholder="e.g., 1oz American Eagle coin from dealer X"></textarea>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Add Purchase</button>
+                        <a href="/" class="btn btn-secondary">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="card mt-3">
+            <div class="card-header">
+                <h6>Common Bullion Weights</h6>
+            </div>
+            <div class="card-body">
+                <ul class="list-unstyled mb-0">
+                    <li><strong>American Silver Eagle:</strong> 1 troy oz</li>
+                    <li><strong>Canadian Silver Maple Leaf:</strong> 1 troy oz</li>
+                    <li><strong>Silver Bar (standard):</strong> 10 troy oz</li>
+                    <li><strong>American Gold Eagle:</strong> 1 troy oz</li>
+                    <li><strong>Gold Bar (common):</strong> 1 troy oz</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('purchase_date').valueAsDate = new Date();
+</script>
+{% endblock %}
