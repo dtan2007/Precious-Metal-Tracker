@@ -220,11 +220,6 @@ pip install python-dotenv
 - Delete `instance/database.db` to reset the database
 - The database will be automatically recreated on next run
 
-### Port Already in Use
-```bash
-# Change the port in app.py (line at bottom):
-app.run(debug=True, port=5001)  # Use 5001 instead of 5000
-```
 
 ## 📄 License
 
