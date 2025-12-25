@@ -79,6 +79,7 @@ python app.py
 6. **Open your browser:**
 ```
 http://localhost:5000
+https://http://127.0.0.1:5000
 ```
 
 ## Usage
@@ -169,34 +170,6 @@ The free tier does not include historical price data. The charts display mock hi
 
 **Rate Limiting:**
 Each dashboard page load uses 1 API request for live prices. The charts use mock data and don't consume API requests. With the free tier, you can load the dashboard about 100 times per month.
-
-## Security
-
-- **Environment Variables**: API keys and secrets stored in `.env` (not committed to git)
-- **Secret Key**: Used for Flask session signing (generate a strong one!)
-- **Input Validation**: Form inputs are validated on both client and server side
-- **No Authentication**: Current version is single-user (runs locally)
-
-**For Production Deployment:**
-- Add user authentication
-- Use a production WSGI server (Gunicorn, uWSGI)
-- Use PostgreSQL instead of SQLite
-- Enable HTTPS
-- Implement rate limiting
-- Add CSRF protection for forms
-
-## Future Enhancements
-
-- [ ] User authentication and multi-user support
-- [ ] Data export (CSV, PDF reports)
-- [ ] Price alerts via email/SMS
-- [ ] Mobile app (React Native or Flutter)
-- [ ] More detailed analytics and reports
-- [ ] Support for additional precious metals
-- [ ] Integration with bullion dealers for purchase import
-- [ ] Portfolio performance comparison with indices
-- [ ] Tax reporting features
-- [ ] Backup and restore functionality
 
 ## Troubleshooting
 
