@@ -8,13 +8,13 @@ A full-stack web application for tracking precious metals investments (gold, sil
 
 ## Features
 
-- 📊 **Real-Time Dashboard** - View your complete portfolio at a glance
-- 💵 **Live Spot Prices** - Fetches current precious metals prices from Metals-API
-- 📈 **Historical Charts [FAKE DATA]** - Interactive 30-day price charts for gold and silver
-- 💰 **Profit/Loss Tracking** - Automatic calculation of gains/losses and return percentages
-- 🗂️ **Purchase Management** - Add, view, and delete purchase records
-- 📱 **Responsive Design** - Works seamlessly on desktop, tablet, and mobile
-- 🔒 **Secure** - Environment variables for API keys and sensitive data
+- **Real-Time Dashboard** - View your complete portfolio at a glance
+- **Live Spot Prices** - Fetches current precious metals prices from Metals-API
+- **Historical Charts [FAKE DATA]** - Interactive 30-day price charts for gold and silver
+- **Profit/Loss Tracking** - Automatic calculation of gains/losses and return percentages
+- **Purchase Management** - Add, view, and delete purchase records
+- **Responsive Design** - Works seamlessly on desktop, tablet, and mobile
+- **Secure** - Environment variables for API keys and sensitive data
 
 ### Dashboard
 View your complete portfolio with summary cards, current prices, holdings breakdown, and historical charts.
@@ -197,10 +197,3 @@ pip install python-dotenv
 ## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- [MetalPriceAPI](https://metalpriceapi.com) for providing precious metals pricing data
-- [Bootstrap](https://getbootstrap.com) for the responsive CSS framework
-- [Chart.js](https://www.chartjs.org) for beautiful, interactive charts
-- [Flask](https://flask.palletsprojects.com) for the excellent Python web framework
