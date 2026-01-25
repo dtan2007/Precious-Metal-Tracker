@@ -63,12 +63,12 @@ def get_live_prices():
         
         data = response.json()
         
-        print("🔍 DEBUG - API Response:")
+        print("DEBUG - API Response:")
         print(f"   Success: {data.get('success', 'Not found')}")
         print(f"   Rates: {data.get('rates', 'Not found')}")
         
         if not data.get('success', False):
-            print(f"⚠️  API error: {data.get('error', 'Unknown error')} - using mock data")
+            print(f"API error: {data.get('error', 'Unknown error')} - using mock data")
             return mock_prices
         
         # need to do 1/rates from metalpriceapi
@@ -207,7 +207,7 @@ if __name__ == '__main__':
         print("METAL_PRICE_API_KEY not found - using mock price data")
     
     print("="*50)
-    print("📊 Server running at: http://localhost:5000")
+    print("Server running at: http://localhost:5000")
     print("="*50 + "\n")
     
     app.run(debug=True, port=5000)
